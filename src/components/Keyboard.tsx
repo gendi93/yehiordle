@@ -9,11 +9,12 @@ type KeyboardProps = {
 };
 
 const Keyboard = ({ keys, handleInput }: KeyboardProps) => {
-  const handleClick = useCallback(
-    (e: MouseEvent) => {
+  const handleClick: React.MouseEventHandler<HTMLButtonElement> = useCallback(
+    (e) => {
       const char = (e.target as HTMLButtonElement)?.dataset.char;
 
       if (char) handleInput(char);
+      return;
     },
     [handleInput]
   );
