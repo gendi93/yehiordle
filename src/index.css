@@ -16,7 +16,108 @@
   --black: #121213;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 #root {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   text-align: center;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.cell-flip {
+  animation: flip 0.6s ease-in-out;
+}
+
+.keyboard-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.cell-bounce {
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 5px;
+  }
+  
+  /* Smaller cells on mobile */
+  .cell-flip {
+    font-size: 32px !important;
+  }
+}
+
+/* Accessibility */
+*:focus-visible {
+  outline: 2px solid #538d4e;
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline: 2px solid #538d4e;
+  outline-offset: 2px;
 }

@@ -43,7 +43,30 @@ export enum COLORS {
   Grey = "#3a3a3c",
   Yellow = "#b59f3b",
   Black = "#121213",
+  White = "#ffffff",
 }
+
+// Light theme colors
+export const LIGHT_COLORS = {
+  Green: "#538d4e",
+  Grey: "#787c7e",
+  Yellow: "#c9b458",
+  Black: "#ffffff",
+  White: "#121213",
+  Background: "#ffffff",
+  Border: "#d3d6da",
+};
+
+// Dark theme colors (default)
+export const DARK_COLORS = {
+  Green: "#538d4e",
+  Grey: "#3a3a3c",
+  Yellow: "#b59f3b",
+  Black: "#121213",
+  White: "#ffffff",
+  Background: "#121213",
+  Border: "#3a3a3c",
+};
 
 const game: {
   attempt: number;
