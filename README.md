@@ -1,4 +1,36 @@
-# React + TypeScript + Vite
+# Yehiordle
+
+A Wordle clone built with React, TypeScript, and Vite.
+
+## Requirements
+
+- Node.js >= 22.0.0
+- Bun (recommended) or npm/yarn
+
+## Getting Started
+
+Install dependencies:
+```bash
+bun install
+# or
+npm install
+```
+
+Run the development server:
+```bash
+bun run dev
+# or
+npm run dev
+```
+
+Build for production:
+```bash
+bun run build
+# or
+npm run build
+```
+
+## Original Template Info
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
